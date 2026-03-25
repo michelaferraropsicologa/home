@@ -1,105 +1,102 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Sito</title>
+    <title>Home</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #333;
-            padding: 15px 0;
-        }
-
-        nav {
             display: flex;
-            justify-content: center;
         }
 
-        nav a {
+        /* MENU LATERALE */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            padding: 15px;
             font-size: 18px;
             transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #f4c542;
+        .sidebar a:hover {
+            background-color: #575757;
         }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-        section {
-            padding: 60px 20px;
+        /* CONTENUTO */
+        .content {
+            margin-left: 200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
+        .content img {
+            max-width: 300px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 22px;
+            max-width: 500px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .sidebar a {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <a href="#chi-sono">Chi sono</a>
-        <a href="#cosa-faccio">Cosa faccio</a>
-        <a href="#blog">Blog</a>
-        <a href="#contatti">Contatti</a>
-    </nav>
-</header>
+    <!-- MENU -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="cosa-faccio.html">Di cosa mi occupo</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatti.html">Contatti</a>
+    </div>
 
-<div class="hero">
-    <h1>Benvenuto nel mio sito</h1>
-    <p>Scopri chi sono e cosa faccio</p>
-</div>
-
-<section id="chi-sono">
-    <h2>Chi sono</h2>
-    <p>Scrivi qui una breve descrizione su di te.</p>
-</section>
-
-<section id="cosa-faccio">
-    <h2>Cosa faccio</h2>
-    <p>Descrivi i tuoi servizi o le tue attività.</p>
-</section>
-
-<section id="blog">
-    <h2>Blog</h2>
-    <p>Qui puoi inserire articoli o aggiornamenti.</p>
-</section>
-
-<section id="contatti">
-    <h2>Contatti</h2>
-    <p>Email: michelaferraropsy@gmail.com</p>
-    <p>Numero:+39 3518814013</p>
-</section>
-
-<footer>
-    <p>© 2026 Il Mio Sito</p>
-</footer>
+    <!-- CONTENUTO HOME -->
+    <div class="content">
+        <img src="https://via.placeholder.com/300" alt="La mia foto">
+        <p class="quote">"Mostrare le tue ferite non ti rende debole, ti rende umano"</p>
+    </div>
 
 </body>
 </html>
