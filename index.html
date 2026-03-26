@@ -51,43 +51,36 @@
             box-sizing: border-box;
         } 
 
-        /* Citazione SPOSTATA SOPRA */
+        /* Citazione in alto */
         .quote {
             font-style: italic;
             font-size: 26px;
             max-width: 750px;
             color: #555;
-            margin-bottom: 10px; /* Spazio tra frase e foto */
+            margin-bottom: 10px; 
             line-height: 1.2;
         }
         
-        /* Immagine TAGLIATA (Crop) */
+        /* Immagine Tagliata */
         .content img {
             width: 85%;
             max-width: 950px; 
-            height: 400px; /* Altezza fissa per forzare il taglio */
-            object-fit: cover; /* Taglia i bordi mantenendo le proporzioni */
-            object-position: center; /* Mantiene visibile la parte superiore dei soggetti */
+            height: 400px; 
+            object-fit: cover; 
+            object-position: center; 
             border-radius: 20px;
             margin-bottom: 15px;
         }
 
-        /* Testo presentazione NUOVO STILE (Senza il Ciao sono...) */
+        /* Testo presentazione TUTTO IN CORSIVO, NO GRASSETTO */
         .intro-text {
             font-size: 24px;
-            font-style: italic;
-            max-width: 800px;
+            font-style: italic; /* Tutto in corsivo */
+            font-weight: normal; /* Niente grassetto */
+            max-width: 850px;
             line-height: 1.5;
             color: #222;
             margin-top: 0;
-        }
-
-        .name-highlight {
-            font-weight: bold;
-            font-style: normal; /* Il nome non è in corsivo per risaltare */
-            font-size: 32px;
-            display: block; /* Mette il nome su una riga tutta sua */
-            margin-bottom: 10px;
         }
 
         /* RESPONSIVE */
@@ -98,7 +91,7 @@
                 display: flex; flex-wrap: wrap; justify-content: center;
             }
             .content { margin-left: 0; width: 100%; }
-            .content img { height: 300px; } /* Più bassa su mobile */
+            .content img { height: 300px; }
         }
     </style>
 </head>
@@ -119,8 +112,7 @@
         <img src="logomiki.png" alt="Michela Ferraro - Psicologa Clinica">
         
         <p class="intro-text">
-            <span class="name-highlight">Michela Ferraro</span>
-            Psicologa clinica, lavoro con adolescenti e giovani adulti, 
+            Sono Michela Ferraro psicologa clinica e lavoro con adolescenti e giovani adulti, 
             accompagnandoli nei momenti di cambiamento, fatica e crescita.
         </p>
     </div>
