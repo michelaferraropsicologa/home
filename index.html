@@ -29,7 +29,7 @@
             text-decoration: underline;
             font-weight: normal;
             font-style: italic;
-            color: #333;
+            color: #000; /* Nero pieno */
             background: none;
             border: none;
             padding: 0;
@@ -61,7 +61,7 @@
             display: block;
         }
 
-        /* SEZIONE 1: ALTO (SFONDO BIANCO) - TUTTO CENTRATO */
+        /* SEZIONE 1: ALTO (SFONDO BIANCO) */
         .hero {
             height: 100vh;
             background-color: white;
@@ -83,7 +83,7 @@
         }
 
         .hero-title {
-            color: #333;
+            color: #000; /* Nero pieno */
             font-size: 45px;
             font-style: italic;
             font-weight: normal;
@@ -91,8 +91,8 @@
         }
 
         .hero-subtitle {
-            color: #666;
-            font-size: 32px; /* Più grande di prima ma più piccolo del titolo */
+            color: #000; /* Nero pieno */
+            font-size: 32px;
             font-style: italic;
             font-weight: normal;
             margin-top: 5px;
@@ -103,7 +103,7 @@
         .scroll-arrow {
             font-size: 35px;
             text-decoration: none;
-            color: #333;
+            color: #000; /* Nero pieno */
             animation: bounce 2s infinite;
             cursor: pointer;
             display: inline-block;
@@ -115,12 +115,12 @@
             60% {transform: translateY(-5px);}
         }
 
-        /* SEZIONE 2: CONTENUTO (SFONDO ROSA) - LAYOUT COME PRIMA */
+        /* SEZIONE 2: CONTENUTO (SFONDO ROSA) */
         .main-content {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-around; /* Mantiene Home a sx e testo a dx */
+            justify-content: space-around;
             padding: 0 10%;
             box-sizing: border-box;
         }
