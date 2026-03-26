@@ -50,63 +50,55 @@
             padding: 20px;
             box-sizing: border-box;
         } 
-        
-        /* Immagine */
-        .content img {
-            width: 85%;
-            max-width: 950px; 
-            height: auto;
-            border-radius: 20px;
-            margin-bottom: 5px; /* Margine minimo sotto l'immagine */
-        }
 
-        /* Citazione alzata */
+        /* Citazione SPOSTATA SOPRA */
         .quote {
             font-style: italic;
             font-size: 26px;
             max-width: 750px;
             color: #555;
-            margin-top: -5px; /* Sposta la scritta verso l'alto */
-            margin-bottom: 5px; /* Avvicina al nome */
+            margin-bottom: 20px; /* Spazio tra frase e foto */
             line-height: 1.2;
         }
-
-        /* Nome Michela Ferraro */
-        .intro-title {
-            font-size: 36px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            color: #222;
+        
+        /* Immagine TAGLIATA (Crop) */
+        .content img {
+            width: 85%;
+            max-width: 950px; 
+            height: 400px; /* Altezza fissa per forzare il taglio */
+            object-fit: cover; /* Taglia i bordi mantenendo le proporzioni */
+            object-position: center top; /* Mantiene visibile la parte superiore dei soggetti */
+            border-radius: 20px;
+            margin-bottom: 15px;
         }
 
-        /* Testo presentazione */
+        /* Testo presentazione NUOVO STILE (Senza il Ciao sono...) */
         .intro-text {
-            font-size: 22px;
+            font-size: 24px;
             font-style: italic;
-            max-width: 750px;
-            line-height: 1.4;
-            margin: 5px auto 0; /* Ridotto spazio sopra */
+            max-width: 800px;
+            line-height: 1.5;
+            color: #222;
+            margin-top: 0;
+        }
+
+        .name-highlight {
+            font-weight: bold;
+            font-style: normal; /* Il nome non è in corsivo per risaltare */
+            font-size: 32px;
+            display: block; /* Mette il nome su una riga tutta sua */
+            margin-bottom: 10px;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-
+            body { flex-direction: column; }
             .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                width: 100%; height: auto; position: relative;
+                display: flex; flex-wrap: wrap; justify-content: center;
             }
-
-            .content {
-                margin-left: 0;
-                width: 100%;
-            }
+            .content { margin-left: 0; width: 100%; }
+            .content img { height: 300px; } /* Più bassa su mobile */
         }
     </style>
 </head>
@@ -122,14 +114,13 @@
     </div>
 
     <div class="content">
-        <img src="logomiki.png" alt="Michela Ferraro - Psicologa Clinica">
-        
         <p class="quote">"Mostrare le tue ferite non ti rende debole, ti rende umano"</p>
 
-        <h1 class="intro-title">Ciao, sono Michela Ferraro</h1>
+        <img src="logomiki.png" alt="Michela Ferraro - Psicologa Clinica">
         
         <p class="intro-text">
-            Sono una psicologa clinica e lavoro con adolescenti e giovani adulti, 
+            <span class="name-highlight">Michela Ferraro</span>
+            Psicologa clinica, lavoro con adolescenti e giovani adulti, 
             accompagnandoli nei momenti di cambiamento, fatica e crescita.
         </p>
     </div>
