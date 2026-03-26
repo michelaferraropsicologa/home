@@ -27,8 +27,8 @@
             font-size: 20px;
             cursor: pointer;
             text-decoration: underline;
-            font-weight: normal; /* Rimosso grassetto */
-            font-style: italic; /* Aggiunto corsivo */
+            font-weight: normal;
+            font-style: italic;
             color: #333;
             background: none;
             border: none;
@@ -71,11 +71,12 @@
             justify-content: center;
             text-align: center;
             padding: 0 20px;
+            position: relative;
         }
 
         .hero img {
-            width: 80%; /* Occupa l'80% della larghezza della pagina */
-            max-width: 1200px; /* Limite per schermi molto grandi */
+            width: 80%;
+            max-width: 1200px;
             height: 300px;
             object-fit: cover; 
             object-position: center;
@@ -86,8 +87,33 @@
             color: #333;
             font-size: 45px;
             font-style: italic;
-            font-weight: normal; /* Rimosso grassetto */
+            font-weight: normal;
             margin: 0;
+        }
+
+        .hero-subtitle {
+            color: #666;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        /* FRECCETTA SCROLL */
+        .scroll-arrow {
+            position: absolute;
+            bottom: 30px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #333;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
         }
 
         /* SEZIONE 2: CONTENUTO (SFONDO ROSA) */
@@ -131,7 +157,8 @@
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero-title { font-size: 30px; }
-            .hero img { width: 95%; } /* Più larga su mobile per visibilità */
+            .hero-subtitle { font-size: 18px; }
+            .hero img { width: 95%; height: 200px; }
             .main-content { flex-direction: column; text-align: center; }
             .home-label { font-size: 60px; margin-bottom: 20px; }
             .sidebar { left: 20px; top: 20px; }
@@ -155,9 +182,12 @@
     <div class="hero">
         <img src="MikiLogopsy.png" alt="Michela Ferraro Logo">
         <h1 class="hero-title">Michela Ferraro</h1>
+        <p class="hero-subtitle">psicologa</p>
+        
+        <a href="#scopri" class="scroll-arrow">↓</a>
     </div>
 
-    <div class="main-content">
+    <div id="scopri" class="main-content">
         <div class="home-label">Home</div>
 
         <div class="text-container">
