@@ -69,7 +69,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
+            text-align: center; /* TUTTO CENTRATO QUI */
             padding: 0 20px;
             position: relative;
         }
@@ -93,7 +93,7 @@
 
         .hero-subtitle {
             color: #666;
-            font-size: 24px;
+            font-size: 32px; /* Ingrandito */
             font-style: italic;
             font-weight: normal;
             margin-top: 5px;
@@ -120,10 +120,12 @@
         .main-content {
             min-height: 100vh;
             display: flex;
+            flex-direction: column; /* Cambiato per allineare tutto al centro verticalmente */
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
             padding: 0 10%;
             box-sizing: border-box;
+            text-align: center; /* TUTTO CENTRATO QUI */
         }
 
         .home-label {
@@ -132,11 +134,12 @@
             color: rgba(0,0,0,0.03);
             text-transform: uppercase;
             user-select: none;
+            margin-bottom: -20px; /* Avvicina al testo */
         }
 
         .text-container {
-            max-width: 550px;
-            text-align: left;
+            max-width: 650px; /* Un po' più largo per il testo centrato */
+            margin: 0 auto;
         }
 
         .intro-text {
@@ -152,16 +155,17 @@
             color: #777;
             border-top: 1px solid rgba(0,0,0,0.1);
             padding-top: 15px;
+            display: inline-block; /* Mantiene la linea della larghezza del testo */
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero-title { font-size: 30px; }
-            .hero-subtitle { font-size: 18px; }
+            .hero-subtitle { font-size: 22px; }
             .hero img { width: 95%; height: 200px; }
-            .main-content { flex-direction: column; text-align: center; }
-            .home-label { font-size: 60px; margin-bottom: 20px; }
+            .home-label { font-size: 60px; margin-bottom: 10px; }
             .sidebar { left: 20px; top: 20px; }
+            .intro-text { font-size: 20px; }
         }
     </style>
 </head>
