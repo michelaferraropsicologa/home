@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - Michela Ferraro</title>
 
     <style>
         body {
@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             display: flex;
             background-color: rgba(250, 232, 228, 1);
+            color: #333; /* Colore testo principale */
         }
 
         /* MENU LATERALE */
@@ -43,37 +44,60 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh; /* Cambiato in min-height per gestire più testo */
             text-align: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         } 
+        
         .content img {
             width: 60%;
-            max-width: 800px;
+            max-width: 400px; /* Ridotto un po' per dare spazio al testo */
             height: auto;
             border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            max-width: 600px;
+            color: #555;
             margin-bottom: 30px;
         }
 
-       
-        .quote {
-            font-style: italic;
-            font-size: 22px;
-            max-width: 500px;
+        /* NUOVI STILI PER IL TESTO DI PRESENTAZIONE */
+        .intro-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+            margin: 0 auto;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
             .sidebar {
                 width: 100%;
                 height: auto;
                 position: relative;
                 display: flex;
                 justify-content: space-around;
+                padding-top: 0;
             }
 
             .sidebar a {
                 padding: 10px;
-                font-size: 16px;
+                font-size: 14px;
             }
 
             .content {
@@ -86,7 +110,6 @@
 
 <body>
 
-    <!-- MENU -->
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="chi-sono.html">Chi sono</a>
@@ -95,10 +118,17 @@
         <a href="contatti.html">Contatti</a>
     </div>
 
-    <!-- CONTENUTO HOME -->
     <div class="content">
-        <img src="logomiki.png" alt="La mia foto">
+        <img src="logomiki.png" alt="Michela Ferraro - Psicologa Clinica">
+        
         <p class="quote">"Mostrare le tue ferite non ti rende debole, ti rende umano"</p>
+
+        <h1 class="intro-title">Ciao, sono Michela Ferraro 🌸</h1>
+        
+        <p class="intro-text">
+            Sono una psicologa clinica e lavoro con adolescenti e giovani adulti, 
+            accompagnandoli nei momenti di cambiamento, fatica e crescita. 🧠
+        </p>
     </div>
 
 </body>
