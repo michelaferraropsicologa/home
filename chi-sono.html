@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        /* MENU A TENDINA (Nero #000 come Home) */
+        /* MENU A TENDINA */
         .sidebar {
             position: fixed;
             left: 40px;
@@ -68,26 +68,17 @@
             padding: 120px 40px 60px 40px;
         }
 
-        .profile-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 50px;
-            margin-bottom: 80px;
-        }
-
-        .profile-section img {
+        /* Testo che scorre intorno alla foto */
+        .profile-image {
             width: 350px;
             height: auto;
             max-height: 500px;
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 120px;
-        }
-
-        .bio-text {
-            flex: 1;
+            float: left; /* La foto sta a sinistra */
+            margin-right: 50px; /* Spazio tra foto e testo */
+            margin-bottom: 20px; /* Spazio sotto la foto quando il testo ci gira intorno */
         }
 
         .bio-text h1 {
@@ -95,6 +86,7 @@
             font-style: italic;
             font-weight: normal;
             color: #000;
+            margin-top: 0;
             margin-bottom: 30px;
         }
 
@@ -104,12 +96,15 @@
             font-style: italic;
             color: #333;
             margin-bottom: 20px;
+            text-align: justify;
         }
 
         /* SEZIONE FORMAZIONE */
         .education-section {
+            clear: both; /* Impedisce alla formazione di salire accanto alla foto */
             border-top: 1px solid rgba(0,0,0,0.1);
             padding-top: 50px;
+            margin-top: 40px;
         }
 
         .education-section h2 {
@@ -140,15 +135,12 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-            .profile-section img {
+            .profile-image {
+                float: none;
+                display: block;
+                margin: 0 auto 30px auto;
                 width: 100%;
                 max-width: 300px;
-                position: static;
             }
             .sidebar { left: 20px; top: 20px; }
             .container { padding-top: 80px; }
@@ -170,26 +162,25 @@
     </div>
 
     <div class="container">
-        <section class="profile-section">
-            <img src="ProfiloFoto.jpg" alt="Michela Ferraro">
+        <div class="bio-text">
+            <h1>Chi sono</h1>
             
-            <div class="bio-text">
-                <h1>Chi sono</h1>
-                <p>Mi chiamo Michela Ferraro e sono laureata in Psicologia Clinica.</p>
-                
-                <p>La scelta di questo percorso nasce da qualcosa che mi ha sempre guidata: il desiderio di prendermi cura delle persone. Nel tempo, questo “perché” è diventato sempre più chiaro e concreto, trasformandosi in un interesse profondo per il benessere psicologico e le relazioni.</p>
+            <img src="ProfiloFoto.jpg" alt="Michela Ferraro" class="profile-image">
 
-                <p>Durante gli anni universitari ho costruito il mio percorso approfondendo diverse fasi della vita. La mia tesi triennale si è concentrata sulle demenze e sugli interventi non farmacologici, come la musicoterapia e la doll therapy, esperienze che mi hanno fatto comprendere quanto anche nei momenti più delicati sia possibile prendersi cura della persona in modo umano e significativo.</p>
+            <p>Mi chiamo Michela Ferraro e sono laureata in Psicologia Clinica.</p>
+            
+            <p>La scelta di questo percorso nasce da qualcosa che mi ha sempre guidata: il desiderio di prendermi cura delle persone. Nel tempo, questo “perché” è diventato sempre più chiaro e concreto, trasformandosi in un interesse profondo per il benessere psicologico e le relazioni.</p>
 
-                <p>Successivamente, ho approfondito il tema delle relazioni familiari nella prima infanzia attraverso il progetto Cooparent 2 Balance, un’iniziativa pensata per supportare i genitori nella costruzione di una collaborazione efficace nei primi anni di vita del bambino. Questo lavoro rappresenta per me un ulteriore passo nella comprensione di quanto il prendersi cura passi anche dalla qualità delle relazioni, fin dall’inizio.</p>
+            <p>Durante gli anni universitari ho costruito il mio percorso approfondendo diverse fasi della vita. La mia tesi triennale si è concentrata sulle demenze e sugli interventi non farmacologici, come la musicoterapia e la doll therapy, esperienze che mi hanno fatto comprendere quanto anche nei momenti più delicati sia possibile prendersi cura della persona in modo umano e significativo.</p>
 
-                <p>Accanto allo studio, il volontariato ha avuto un ruolo fondamentale nel mio percorso. Mi ha permesso di prendermi cura dei bambini non solo nei loro bisogni più visibili, ma anche di imparare a guardarli oltre ciò che appare: riconoscere emozioni, segnali e bisogni più profondi, spesso non espressi a parole. È proprio lì che ho capito quanto sia importante saper andare oltre la superficie per comprendere davvero l’altro.</p>
+            <p>Successivamente, ho approfondito il tema delle relazioni familiari nella prima infanzia attraverso il progetto Cooparent 2 Balance, un’iniziativa pensata per supportare i genitori nella costruzione di una collaborazione efficace nei primi anni di vita del bambino. Questo lavoro rappresenta per me un ulteriore passo nella comprensione di quanto il prendersi cura passi anche dalla qualità delle relazioni, fin dall’inizio.</p>
 
-                <p>L’anno trascorso negli Stati Uniti, invece, mi ha aiutata a crescere a livello personale, rendendomi più aperta, autonoma e capace di adattarmi.</p>
+            <p>Accanto allo studio, il volontariato ha avuto un ruolo fondamentale nel mio percorso. Mi ha permesso di prendermi cura dei bambini non solo nei loro bisogni più visibili, ma anche di imparare a guardarli oltre ciò che appare: riconoscere emozioni, segnali e bisogni più profondi, spesso non espressi a parole. È proprio lì che ho capito quanto sia importante saper andare oltre la superficie per comprendere davvero l’altro.</p>
 
-                <p>Oggi porto con me tutto questo: attenzione all’altro, capacità di ascolto e il desiderio di costruire un percorso professionale che metta davvero al centro le persone. Per me, prendersi cura non è solo un valore, ma la direzione che guida ogni scelta.</p>
-            </div>
-        </section>
+            <p>L’anno trascorso negli Stati Uniti, invece, mi ha aiutata a crescere a livello personale, rendendomi più aperta, autonoma e capace di adattarmi.</p>
+
+            <p>Oggi porto con me tutto questo: attenzione all’altro, capacità di ascolto e il desiderio di costruire un percorso professionale che metta davvero al centro le persone. Per me, prendersi cura non è solo un valore, ma la direzione che guida ogni scelta.</p>
+        </div>
 
         <section class="education-section">
             <h2>Formazione</h2>
