@@ -68,7 +68,14 @@
             padding: 120px 40px 60px 40px;
         }
 
-        /* Testo che scorre intorno alla foto */
+        h1 {
+            font-size: 40px;
+            font-style: italic;
+            font-weight: normal;
+            color: #000;
+            margin-bottom: 40px; /* Spazio sotto il titolo Chi Sono */
+        }
+
         .profile-image {
             width: 350px;
             height: auto;
@@ -76,18 +83,9 @@
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            float: left; /* La foto sta a sinistra */
+            float: left; /* Foto a sinistra */
             margin-right: 50px; /* Spazio tra foto e testo */
-            margin-bottom: 20px; /* Spazio sotto la foto quando il testo ci gira intorno */
-        }
-
-        .bio-text h1 {
-            font-size: 40px;
-            font-style: italic;
-            font-weight: normal;
-            color: #000;
-            margin-top: 0;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* Spazio sotto la foto */
         }
 
         .bio-text p {
@@ -96,12 +94,11 @@
             font-style: italic;
             color: #333;
             margin-bottom: 20px;
-            text-align: justify;
         }
 
         /* SEZIONE FORMAZIONE */
         .education-section {
-            clear: both; /* Impedisce alla formazione di salire accanto alla foto */
+            clear: both; /* Evita sovrapposizioni con la foto */
             border-top: 1px solid rgba(0,0,0,0.1);
             padding-top: 50px;
             margin-top: 40px;
@@ -142,6 +139,7 @@
                 width: 100%;
                 max-width: 300px;
             }
+            h1 { text-align: center; }
             .sidebar { left: 20px; top: 20px; }
             .container { padding-top: 80px; }
         }
@@ -162,9 +160,9 @@
     </div>
 
     <div class="container">
+        <h1>Chi sono</h1>
+
         <div class="bio-text">
-            <h1>Chi sono</h1>
-            
             <img src="ProfiloFoto.jpg" alt="Michela Ferraro" class="profile-image">
 
             <p>Mi chiamo Michela Ferraro e sono laureata in Psicologia Clinica.</p>
@@ -187,7 +185,7 @@
             
             <div class="edu-item">
                 <h3>Laurea in Psicologia Clinica</h3>
-                <p>Università degli Studi [Sostituisci Nome Università] - [Anno]</p>
+                <p>Università degli Studi [Nome Università] - [Anno]</p>
             </div>
 
             <div class="edu-item">
